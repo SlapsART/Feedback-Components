@@ -89,6 +89,7 @@ export function FeedbackAsistentePage() {
                 actionLabel="Acción"
                 durationMs={6000}
                 onDismiss={() => setVisible(false)}
+                enterDistance={64}
                 sx={{ width: 435, maxWidth: '90%' }}
               />
 

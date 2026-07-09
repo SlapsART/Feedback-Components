@@ -26,6 +26,12 @@ export interface FeedbackToastProps {
   onDismiss?: () => void;
   /** The exit animation fully finished and the toast is now unmounted. */
   onExited?: () => void;
+  /**
+   * How far below its resting spot the toast starts on enter (and returns to on exit), in px.
+   * Bump this up when something (e.g. an assistant dock) sits directly below the toast, so it
+   * visibly travels up from behind that element instead of just nudging into place.
+   */
+  enterDistance?: number;
   sx?: SxProps<Theme>;
 }
 
@@ -48,6 +54,7 @@ export function FeedbackToast({
   durationMs = 5000,
   onDismiss,
   onExited,
+  enterDistance = 14,
   sx,
 }: FeedbackToastProps) {
   const theme = useTheme();
@@ -61,10 +68,10 @@ export function FeedbackToast({
       {open && (
         <MotionBox
           key={`feedback-toast-${severity}`}
-          initial={{ opacity: 0, y: 4 }}
+          initial={{ opacity: 0, y: enterDistance }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 4 }}
-          transition={{ duration: 0.18, ease: 'easeOut' }}
+          exit={{ opacity: 0, y: enterDistance }}
+          transition={{ duration: 0.42, ease: 'easeInOut' }}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           sx={{
