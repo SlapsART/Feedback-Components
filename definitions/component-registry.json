@@ -1,0 +1,82 @@
+{
+  "_meta": {
+    "version": 1,
+    "updatedAt": "2026-07-08T00:00:00.000Z",
+    "totalComponents": 9,
+    "totalPatterns": 0
+  },
+  "components": {
+    "FeedbackToast": {
+      "path": "src/shared/ui/feedback-toast/FeedbackToast.tsx",
+      "layer": "shared",
+      "global": true,
+      "figmaNodeIds": ["75:24199", "81:243", "75:24234", "75:24497", "75:24587"],
+      "description": "Toast de feedback (pill) con 4 severidades (info/warning/success/error), borde tipo countdown ring que se vacía con el tiempo y botón de cierre al hacer hover.",
+      "props": ["severity", "title", "detail", "actionLabel", "onAction", "durationMs", "onClose"]
+    },
+    "BorderProgressRing": {
+      "path": "src/shared/ui/feedback-toast/BorderProgressRing.tsx",
+      "layer": "shared",
+      "global": true,
+      "figmaNodeIds": ["75:24497", "75:24587"],
+      "description": "Anillo SVG que traza el borde de un contenedor pill y se vacía con stroke-dasharray/pathLength. Usado internamente por FeedbackToast."
+    },
+    "CosmosAppShell": {
+      "path": "src/widgets/cosmos-app-shell/ui/CosmosAppShell.tsx",
+      "layer": "widget",
+      "global": true,
+      "figmaNodeIds": ["94:9252"],
+      "description": "Shell de la app Obligaciones por pagar: Global_Header (breadcrumbs + acciones + avatar) + rail de navegación colapsado."
+    },
+    "ObligacionesTable": {
+      "path": "src/widgets/obligaciones-table/ui/ObligacionesTable.tsx",
+      "layer": "widget",
+      "global": false,
+      "figmaNodeIds": ["94:9276"],
+      "description": "Tabla simple (MUI Table, sin DataGrid) de Obligaciones por pagar con tabs, chips de filtro, búsqueda y datos mock."
+    },
+    "AsistenteComposer": {
+      "path": "src/widgets/asistente-composer/ui/AsistenteComposer.tsx",
+      "layer": "widget",
+      "global": true,
+      "figmaNodeIds": ["94:9550", "82:15710"],
+      "description": "Barra de chat IA anclada abajo, con estado closed (input) y open (zona más alta)."
+    },
+    "ConsolaAppShell": {
+      "path": "src/widgets/consola-app-shell/ui/ConsolaAppShell.tsx",
+      "layer": "widget",
+      "global": true,
+      "figmaNodeIds": ["82:23912"],
+      "description": "Shell de la Consola de Contabilización: navbar Sinco + título + botón de asistente."
+    },
+    "BorradoresSidebar": {
+      "path": "src/widgets/borradores-sidebar/ui/BorradoresSidebar.tsx",
+      "layer": "widget",
+      "global": false,
+      "figmaNodeIds": ["82:23918"],
+      "description": "Sidebar de borradores: tabs, búsqueda, chips de filtro y lista con datos mock."
+    },
+    "PartidasTable": {
+      "path": "src/widgets/partidas-table/ui/PartidasTable.tsx",
+      "layer": "widget",
+      "global": false,
+      "figmaNodeIds": ["82:23963"],
+      "description": "Tabla simple (sin DataGrid) de partidas contables con fila de asignación pendiente."
+    },
+    "FloatingBalanceBar": {
+      "path": "src/widgets/floating-balance-bar/ui/FloatingBalanceBar.tsx",
+      "layer": "widget",
+      "global": true,
+      "figmaNodeIds": ["82:23965"],
+      "description": "Barra flotante con estado Balanceado, totales Débito/Crédito y acciones Descartar/Enviar."
+    },
+    "IconAsistenteBubble": {
+      "path": "src/shared/ui/icons/IconAsistenteBubble.tsx",
+      "layer": "shared",
+      "global": true,
+      "figmaNodeIds": ["82:23916"],
+      "description": "Glyph 'chart-bubble' (3 círculos concéntricos, #2F43D0) embebido verbatim del asset de Figma — no existe en @tabler/icons-react. Usado en el botón Asistente de ConsolaAppShell."
+    }
+  },
+  "patterns": {}
+}

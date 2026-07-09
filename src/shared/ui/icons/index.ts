@@ -1,0 +1,1 @@
+export { IconAsistenteBubble } from './IconAsistenteBubble';
