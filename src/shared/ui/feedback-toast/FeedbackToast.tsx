@@ -121,7 +121,7 @@ export function FeedbackToast({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.6 }}
                 transition={{ duration: 0.12, ease: 'easeOut' }}
-                style={{ position: 'absolute', top: 0, right: 0, transform: 'translate(50%, -50%)' }}
+                style={{ position: 'absolute', top: -3, right: -11 }}
               >
                 <IconButton
                   size="small"
